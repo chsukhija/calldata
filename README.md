@@ -39,10 +39,14 @@ calldata/
 ## Tasks Completed
 
 ### Task 1: Cluster Setup
-- ✅ Scylla installation on 3 nodes
-- ✅ Monitoring stack installation
+- ✅ Scylla installation on 3 nodes - 
+- ✅ Monitoring stack installation - http://35.91.232.28:3000/
 - ✅ Cluster configuration and verification
 - 📁 Output: `outputs/task1/`
+
+![alt text](image.png)
+
+![alt text](image-1.png)
 
 ### Task 2: Data Model & Generation
 - ✅ LLM-generated data model for call tracking
@@ -51,11 +55,16 @@ calldata/
 - ✅ Generated 15 users with 20-25 calls each
 - 📁 Output: `data-model/` and `outputs/task2/`
 
+![alt text](image-2.png)
+
 ### Task 3: Analytics Script
 - ✅ Script to calculate call success rate
 - ✅ Time range filtering
 - ✅ Optional phone number filtering
 - 📁 Output: `analytics/scripts/` and `analytics/outputs/`
+
+![alt text](image-3.png)
+
 
 ### Task 4: Performance Analysis
 - ✅ Shard imbalance analysis
