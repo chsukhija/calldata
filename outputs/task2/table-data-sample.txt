@@ -1,41 +1,48 @@
-Sample Query: SELECT * FROM calldrop.call_records WHERE source_phone_number = '+12345678901' LIMIT 5;
+Sample Query: 
 
- source_phone_number | destination_number | call_timestamp              | call_completed | call_duration_seconds | source_cell_tower_id | destination_cell_tower_id | source_phone_imei
----------------------+--------------------+-----------------------------+----------------+-----------------------+----------------------+---------------------------+-------------------
-      +12345678901 |      +12378901234 | 2024-01-15 10:30:45.000000 |           True |                   125 |            TOWER-023 |                 TOWER-067 | 123456789012345
-      +12345678901 |      +12389012345 | 2024-01-14 15:22:10.000000 |           True |                   456 |            TOWER-045 |                 TOWER-089 | 234567890123456
-      +12345678901 |      +12340123456 | 2024-01-13 08:15:30.000000 |          False |                    12 |            TOWER-012 |                 TOWER-034 | 345678901234567
-      +12345678901 |      +12351234567 | 2024-01-12 20:45:00.000000 |           True |                   789 |            TOWER-078 |                 TOWER-091 | 456789012345678
-      +12345678901 |      +12362345678 | 2024-01-11 12:30:15.000000 |           True |                   234 |            TOWER-056 |                 TOWER-023 | 567890123456789
+cqlsh> SELECT * FROM calldrop.call_records LIMIT 5;
+
+ user_phone | call_success | call_timestamp                  | destination_number | call_duration_seconds | destination_cell_tower_id | source_cell_tower_id | source_phone_imei
+------------+--------------+---------------------------------+--------------------+-----------------------+---------------------------+----------------------+--------------------------------------
+  +15550006 |        False | 2026-02-17 23:23:29.000000+0000 |        +1666118661 |                    54 |                     TWR23 |                TWR26 | 8d010074-a1e2-4c53-92e5-d1a62d10e10e
+  +15550006 |        False | 2026-02-17 17:23:26.000000+0000 |        +1666115709 |                   168 |                     TWR17 |                TWR46 | 9955ed56-5505-4bd0-9acd-e6dfa7fb0756
+  +15550006 |        False | 2026-02-17 10:23:26.000000+0000 |        +1666129822 |                  1178 |                     TWR25 |                TWR45 | 54b75763-246d-46e5-a535-26a246a3d0b4
+  +15550006 |        False | 2026-02-17 08:23:26.000000+0000 |        +1666111338 |                   454 |                     TWR15 |                TWR38 | 383ddbc1-bae9-41fa-a47a-85d29cb63fa2
+  +15550006 |        False | 2026-02-15 19:23:26.000000+0000 |        +1666119261 |                   814 |                     TWR42 |                TWR43 | 6dcb4246-7271-4e4a-9e70-d59fd7aa8b58
 
 (5 rows)
+cqlsh> 
 
 ---
 
-Sample Query: SELECT COUNT(*) FROM calldrop.call_records;
+Sample Query: 
+
+cqlsh> SELECT COUNT(*) FROM calldrop.call_records;
 
  count
 -------
-   345
+   347
 
 (1 rows)
+cqlsh> 
 
 ---
 
-Sample Query: SELECT COUNT(*) FROM calldrop.calls_by_completion WHERE call_completed = true;
+Sample Query: 
+cqlsh> SELECT count (*) FROM calldrop.successful_calls ;
 
  count
 -------
-   293
+   347
 
 (1 rows)
+cqlsh> 
 
----
-
-Sample Query: SELECT COUNT(*) FROM calldrop.calls_by_completion WHERE call_completed = false;
+cqlsh> SELECT count (*) FROM calldrop.successful_calls where call_success=False;
 
  count
 -------
-    52
+   165
 
 (1 rows)
+
