@@ -1,0 +1,37 @@
+Connecting to Scylla cluster...
+  Nodes: 10.0.1.10, 10.0.1.11, 10.0.1.12
+  Keyspace: calldrop
+
+✓ Connected successfully
+
+Calculating call success rate...
+  Time Range: 2024-01-01T00:00:00Z to 2024-01-31T23:59:59Z
+  Phone Number: All users
+
+Found 15 users, analyzing calls...
+
+======================================================================
+CALL SUCCESS RATE ANALYSIS
+======================================================================
+
+Time Range:
+  Start: 2024-01-01 00:00:00 UTC
+  End:   2024-01-31 23:59:59 UTC
+  Duration: 30 days, 23 hours, 59 minutes
+
+Filter:
+  Phone Number: All users
+
+Results:
+----------------------------------------------------------------------
+  Total Calls:       345
+  Successful Calls:  293
+  Failed Calls:      52
+----------------------------------------------------------------------
+  Success Rate:      84.93%
+  Failure Rate:      15.07%
+======================================================================
+
+Visual Representation:
+  Successful ✓ [██████████████████████████████████████████████░░░░░░░░]    293 (84.9%)
+  Failed ✗     [███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]     52 (15.1%)

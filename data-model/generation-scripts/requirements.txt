@@ -1,0 +1,2 @@
+# Python dependencies for CallDrop data generation scripts
+cassandra-driver>=3.28.0
