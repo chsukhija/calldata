@@ -1,0 +1,10 @@
+# Scylla Monitoring - Prometheus Targets Configuration
+# Copy this file to prometheus/scylla_servers.yml and update with your node IPs
+
+- targets:
+  - 10.0.1.10:9180  # Node 1 - Replace with actual IP
+  - 10.0.1.11:9180  # Node 2 - Replace with actual IP
+  - 10.0.1.12:9180  # Node 3 - Replace with actual IP
+  labels:
+    cluster: CallDrop-Cluster
+    dc: datacenter1

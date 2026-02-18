@@ -1,0 +1,41 @@
+Sample Query: SELECT * FROM calldrop.call_records WHERE source_phone_number = '+12345678901' LIMIT 5;
+
+ source_phone_number | destination_number | call_timestamp              | call_completed | call_duration_seconds | source_cell_tower_id | destination_cell_tower_id | source_phone_imei
+---------------------+--------------------+-----------------------------+----------------+-----------------------+----------------------+---------------------------+-------------------
+      +12345678901 |      +12378901234 | 2024-01-15 10:30:45.000000 |           True |                   125 |            TOWER-023 |                 TOWER-067 | 123456789012345
+      +12345678901 |      +12389012345 | 2024-01-14 15:22:10.000000 |           True |                   456 |            TOWER-045 |                 TOWER-089 | 234567890123456
+      +12345678901 |      +12340123456 | 2024-01-13 08:15:30.000000 |          False |                    12 |            TOWER-012 |                 TOWER-034 | 345678901234567
+      +12345678901 |      +12351234567 | 2024-01-12 20:45:00.000000 |           True |                   789 |            TOWER-078 |                 TOWER-091 | 456789012345678
+      +12345678901 |      +12362345678 | 2024-01-11 12:30:15.000000 |           True |                   234 |            TOWER-056 |                 TOWER-023 | 567890123456789
+
+(5 rows)
+
+---
+
+Sample Query: SELECT COUNT(*) FROM calldrop.call_records;
+
+ count
+-------
+   345
+
+(1 rows)
+
+---
+
+Sample Query: SELECT COUNT(*) FROM calldrop.calls_by_completion WHERE call_completed = true;
+
+ count
+-------
+   293
+
+(1 rows)
+
+---
+
+Sample Query: SELECT COUNT(*) FROM calldrop.calls_by_completion WHERE call_completed = false;
+
+ count
+-------
+    52
+
+(1 rows)
