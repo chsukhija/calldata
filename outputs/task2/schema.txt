@@ -1,0 +1,51 @@
+cqlsh> DESCRIBE KEYSPACE calldrop;
+
+CREATE KEYSPACE calldrop WITH replication = {'class': 'org.apache.cassandra.locator.NetworkTopologyStrategy', 'us-west-2': '3'} AND durable_writes = true AND tablets = {'enabled': false};
+
+CREATE TABLE calldrop.call_records (
+    user_phone text,
+    call_success boolean,
+    call_timestamp timestamp,
+    destination_number text,
+    call_duration_seconds int,
+    destination_cell_tower_id text,
+    source_cell_tower_id text,
+    source_phone_imei text,
+    PRIMARY KEY (user_phone, call_success, call_timestamp, destination_number)
+) WITH CLUSTERING ORDER BY (call_success ASC, call_timestamp DESC, destination_number ASC)
+    AND bloom_filter_fp_chance = 0.01
+    AND caching = {'keys': 'ALL', 'rows_per_partition': 'ALL'}
+    AND comment = ''
+    AND compaction = {'class': 'IncrementalCompactionStrategy'}
+    AND compression = {'sstable_compression': 'LZ4WithDictsCompressor'}
+    AND crc_check_chance = 1
+    AND default_time_to_live = 0
+    AND gc_grace_seconds = 864000
+    AND max_index_interval = 2048
+    AND memtable_flush_period_in_ms = 0
+    AND min_index_interval = 128
+    AND speculative_retry = '99.0PERCENTILE'
+    AND tombstone_gc = {'mode': 'timeout', 'propagation_delay_in_seconds': '3600'};
+
+
+CREATE MATERIALIZED VIEW calldrop.successful_calls AS
+    SELECT *
+    FROM calldrop.call_records
+    WHERE user_phone IS NOT null AND call_success IS NOT null AND call_timestamp IS NOT null AND destination_number IS NOT null
+    PRIMARY KEY (user_phone, call_success, call_timestamp, destination_number)
+    WITH CLUSTERING ORDER BY (call_success ASC, call_timestamp ASC, destination_number ASC)
+    AND bloom_filter_fp_chance = 0.01
+    AND caching = {'keys': 'ALL', 'rows_per_partition': 'ALL'}
+    AND comment = ''
+    AND compaction = {'class': 'IncrementalCompactionStrategy'}
+    AND compression = {'sstable_compression': 'LZ4WithDictsCompressor'}
+    AND crc_check_chance = 1
+    AND default_time_to_live = 0
+    AND gc_grace_seconds = 864000
+    AND max_index_interval = 2048
+    AND memtable_flush_period_in_ms = 0
+    AND min_index_interval = 128
+    AND speculative_retry = '99.0PERCENTILE'
+    AND tombstone_gc = {'mode': 'timeout', 'propagation_delay_in_seconds': '3600'};
+
+cqlsh> 
