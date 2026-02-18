@@ -7,7 +7,7 @@ This directory contains screenshots from the Scylla Monitoring Stack (Grafana) d
 
 ### Access Grafana
 ```
-URL: http://<monitoring-node-ip>:3000
+URL: http://35.91.232.28:3000
 Username: admin
 Password: <your-password>
 ```
