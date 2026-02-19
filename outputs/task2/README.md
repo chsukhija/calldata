@@ -52,6 +52,8 @@ Screenshot reference:
   
 ![alt text](datageneration.png)
 
+- `table.png`
+
 ![alt text](table.png)
 
 ## 4. Summary
