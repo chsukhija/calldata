@@ -10,8 +10,6 @@ This stage involves:
 2.  Rerunning the success-rate script from Step 3
 3.  Analyzing shard imbalance observed in the monitoring dashboard
 
-------------------------------------------------------------------------
-
 ## 🚀 Step 1 -- Execute the Provided Load Script
 
 After receiving the script (e.g., `loadscript.py`):
@@ -32,7 +30,6 @@ python loadscript.py
 
 This loads call data into the ScyllaDB cluster.
 
-------------------------------------------------------------------------
 
 ## 🔁 Step 2 -- Rerun Success Rate Script
 
@@ -45,7 +42,6 @@ After data load completes:
 This validates that the data was successfully inserted and calculates
 call success percentage.
 
-------------------------------------------------------------------------
 
 ## 📊 Step 3 -- Analyze Shard Imbalance in Grafana
 
@@ -56,7 +52,6 @@ Open the Scylla Monitoring Dashboard in Grafana and navigate to:
 -   Reads per Shard
 -   Reactor Utilization per Shard
 
-------------------------------------------------------------------------
 
 ## ⚠ Observed Shard Imbalance
 
@@ -66,7 +61,9 @@ In the monitoring dashboard, imbalance between shards may appear as:
 -   Other shards remaining mostly idle
 -   Uneven write distribution across shards
 
-------------------------------------------------------------------------
+  
+<img width="1721" height="945" alt="dash" src="https://github.com/user-attachments/assets/c90e0974-703a-4747-9395-16acadf4cac6" />
+
 
 ## 🧠 Explanation of Shard Imbalance
 
@@ -97,7 +94,6 @@ causing uneven load.
 If the data loader inserts records with predictable or skewed partition
 keys, token distribution becomes uneven.
 
-------------------------------------------------------------------------
 
 ## 🏗 Why This Happens in This Exercise
 
@@ -110,7 +106,6 @@ In this scenario:
 This results in a small number of partitions generating most of the
 load, leading to visible shard imbalance.
 
-------------------------------------------------------------------------
 
 ## ✅ How to Improve Distribution
 
@@ -121,8 +116,6 @@ To reduce shard imbalance:
 -   Use a shard-aware driver
 -   Validate token distribution using `nodetool status` and monitoring
     dashboards
-
-------------------------------------------------------------------------
 
 ## 📌 Summary
 
