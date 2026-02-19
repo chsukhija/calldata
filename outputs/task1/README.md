@@ -12,13 +12,9 @@ Private_IP     Public_IP
 
 ## Nodetool Status
 
-### From DBnode1
-
 ![alt text](nodetool.png)
 
 ## Monitoring
-
-### From monitoring node
 
 ### Grafana URL http://35.91.232.28:3000/
 
