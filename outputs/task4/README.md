@@ -95,14 +95,19 @@ cqlsh:usractivity>
 
 After execution:
 
+```
 deactivate
-
+```
 
 ## 8. Troubleshooting
 
 ### ModuleNotFoundError: cassandra
 
-Make sure virtual environment is activated: source venv/bin/activate
+Make sure virtual environment is activated: 
+
+```
+source venv/bin/activate
+```
 
 ### Connection Refused
 
