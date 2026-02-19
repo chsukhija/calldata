@@ -24,6 +24,8 @@ The output confirms:
 
 Screenshot reference:
 - `nodetool.png`
+  
+![alt text](nodetool.png)
 
 ---
 
@@ -46,6 +48,10 @@ The following dashboards confirm cluster metrics visibility:
 - `grafana.png`
 - `grafana1.png`
 - `grafana2.png`
+
+![alt text](grafana.png)
+![alt text](grafana1.png)
+![alt text](grafana2.png)
 
 Metrics verified:
 - CPU utilization
