@@ -5,7 +5,7 @@
 
 ### 2 Table Output
 
-![alt text](datageneration.png)
+![alt text](outputs/task2/datageneration.png)
 
 
 ![alt text](table.png)
