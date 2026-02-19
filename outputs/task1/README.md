@@ -13,6 +13,7 @@ flowchart LR
     DB1 <--> DB2
     DB2 <--> DB3
     DB1 <--> DB3
+```
 
 ## 1. Cluster Node Details
 
