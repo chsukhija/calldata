@@ -1,4 +1,4 @@
-# 📘 Stage 3 -- Data Load & Shard Imbalance Analysis
+# 📘 Data Load & Shard Imbalance Analysis
 
 ## 📌 Overview
 
