@@ -5,13 +5,10 @@
 
 ### 2 Table Output
 
-![alt text](outputs/task2/datageneration.png)
-
-
 ![alt text](table.png)
 
+![alt text](datageneration.png)
 
-
-### 2 Final Script
+### 3 Final Script
 
 [setupdata.sh](setupdata.sh)
