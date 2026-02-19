@@ -1,15 +1,8 @@
 # Task 2 – CallDrop Data Model and Data Generation
 
-## 1. Keyspace Creation
-
-Keyspace: `calldrop`
-
----
-
-## 2. Table Schema
+## 1. Table Schema
 
 Base Table: `call_records`
-
 
 Columns:
 
@@ -32,9 +25,7 @@ Screenshot reference:
   
 ![alt text](schema.png)
 
----
-
-## 3. Materialized View
+## 2. Materialized View
 Materialized View: `successful_calls`
 ```
 CREATE MATERIALIZED VIEW successful_calls AS
@@ -52,7 +43,7 @@ Purpose:
 
 Definition:
 
-## 4. Data Generation
+## 3. Data Generation
   
 Link - [setupdata.sh](setupdata.sh)
 
@@ -63,7 +54,7 @@ Screenshot reference:
 
 ![alt text](table.png)
 
-## 5. Summary
+## 4. Summary
 
 ✔ Schema created  
 ✔ Materialized view created  
