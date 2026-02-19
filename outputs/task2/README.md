@@ -27,6 +27,12 @@ Screenshot reference:
 
 ## 2. Materialized View
 Materialized View: `successful_calls`
+
+Purpose:
+- Retrieve successfully completed calls efficiently.
+
+Definition:
+
 ```
 CREATE MATERIALIZED VIEW successful_calls AS
 SELECT *
@@ -38,10 +44,6 @@ AND destination_number IS NOT NULL
 PRIMARY KEY ((user_phone), call_success, call_timestamp, destination_number);
 ```
 
-Purpose:
-- Retrieve successfully completed calls efficiently.
-
-Definition:
 
 ## 3. Data Generation
   
