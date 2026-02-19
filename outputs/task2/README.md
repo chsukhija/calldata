@@ -7,8 +7,8 @@
 
 ![alt text](table.png)
 
-![alt text](datageneration.png)
-
 ### 3 Final Script
 
 [setupdata.sh](setupdata.sh)
+
+![alt text](datageneration.png)
