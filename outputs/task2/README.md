@@ -1,4 +1,4 @@
-## DataGeneration
+## CallDrop
 
 ### 1 Tables and keyspaces schema 
 ![alt text](schema.png)
