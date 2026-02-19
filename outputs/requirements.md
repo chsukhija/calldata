@@ -7,7 +7,7 @@ You are in the DevOps team at a large Telco provider named “CallDrop”. CallD
 
 
 
-# 1
+### Task 1
 CallDrop is using AWS.
 
 Download and Install the latest Scylla Open source on the 3 nodes provided to you.
