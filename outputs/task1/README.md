@@ -1,29 +1,64 @@
-## Nodes details
+# Task 1 – Cluster Setup and Monitoring
 
-```
-Private_IP     Public_IP
-172.31.31.48   18.237.255.85 # DBnode1
-172.31.23.41   54.187.5.170  # DBnode2
-172.31.25.35   35.91.75.139  # DBnode3
-172.31.22.30   35.91.232.28  # Monitoring
-172.31.26.203  54.191.169.70  # Client
+## 1. Cluster Node Details
 
-```
+| Role        | Private IP     | Public IP        |
+|------------|---------------|------------------|
+| DB Node 1  | 172.31.31.48  | 18.237.255.85    |
+| DB Node 2  | 172.31.23.41  | 54.187.5.170     |
+| DB Node 3  | 172.31.25.35  | 35.91.75.139     |
+| Monitoring | 172.31.22.30  | 35.91.232.28     |
+| Client     | 172.31.26.203 | 54.191.169.70    |
 
-## Nodetool Status
+---
 
-![alt text](nodetool.png)
+## 2. Cluster Health Verification
 
-## Monitoring
+The cluster health was validated using nodetool status
 
-### Link - [Grafana URL](http://35.91.232.28:3000/)
+The output confirms:
 
-### Dashboard 1
-![alt text](grafana.png)
+- All nodes are in `UN` (Up/Normal) state
+- Replication factor is properly configured
+- No nodes are down or joining
 
-### Dashboard 2
-![alt text](grafana1.png)
+Screenshot reference:
+- `nodetool.png`
 
-### Dashboard 3
-![alt text](grafana2.png)
+---
 
+## 3. Monitoring Setup
+
+Scylla Monitoring Stack was deployed on the monitoring node 35.91.232.28. 
+
+### Components Running:
+- Prometheus
+- Grafana
+- Alertmanager
+
+Grafana Dashboard Access: [Grafana URL](http://35.91.232.28:3000/)
+
+
+### Dashboard Screenshots
+
+The following dashboards confirm cluster metrics visibility:
+
+- `grafana.png`
+- `grafana1.png`
+- `grafana2.png`
+
+Metrics verified:
+- CPU utilization
+- Disk usage
+- Read/Write throughput
+- Latency
+- Node status
+
+---
+
+## 4. Validation Summary
+
+✔ 3-node Scylla cluster operational  
+✔ Monitoring stack deployed  
+✔ Grafana dashboards active  
+✔ Cluster health verified  
