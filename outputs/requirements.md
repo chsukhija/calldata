@@ -17,7 +17,7 @@ The operating system you will be using is Ubuntu.
 We provided you with a monitoring node, please install Scylla monitoring stack. 
 
 
-# 2 
+### Task 2 
 Once you have the Scylla cluster up and running, use an LLM of your choice (Gemini, Claude, ChatGPT) to create a data model for “CallDrop” call track information
 
 The following will be our columns in the table: 
@@ -43,7 +43,7 @@ Create a materialized view for the successfully completed column.
 Share with me the prompt, LLM output, schema, revisions and any final generation scripts you used.
 
 
-# 3
+### Task 3
 The marketing team would like to know what the rate of calls successfully completed during a range of hours. 
 
 Write in your preferred language (bash/*sh/python/java/C++/golang) a short script or program (no need for a UI) that receives the following input:
@@ -57,7 +57,7 @@ The output will should be -
 Percentage of successfully completed phone calls
 
 
-# 4
+### Task 4
 A script will be provided to you once you reach stage 3 (email me with the output from step 2). After receiving the script, execute it to load data. Rerun your script from step 3. Can you explain the imbalance in the monitoring dashboard between the different Shards in the nodes?
 
 System to work with: 
@@ -76,6 +76,7 @@ c. Install Scylla monitoring using the docker container option on the 4th node
 d. The fifth node will be your client node to run scripts
 
 ## Output
+
 For item #1 Provide: 
 
  Nodetool status output 
