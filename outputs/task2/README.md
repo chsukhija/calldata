@@ -5,7 +5,7 @@
 
 ![alt text](table.png)
 
-## Final Script
+## Script
 
 Link - [setupdata.sh](setupdata.sh)
 
