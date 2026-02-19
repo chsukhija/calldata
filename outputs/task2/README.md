@@ -9,6 +9,6 @@
 
 ### 3 Final Script
 
-[setupdata.sh](setupdata.sh)
+Link - [setupdata.sh](setupdata.sh)
 
 ![alt text](datageneration.png)
