@@ -59,11 +59,15 @@ Grafana Dashboard Access: [Grafana URL](http://35.91.232.28:3000/)
 The following dashboards confirm cluster metrics visibility:
 
 - `grafana.png`
-- `grafana1.png`
-- `grafana2.png`
+
+
 
 ![alt text](grafana.png)
+- `grafana1.png`
+  
 ![alt text](grafana1.png)
+
+- `grafana2.png`
 ![alt text](grafana2.png)
 
 Metrics verified:
