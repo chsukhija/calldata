@@ -1,4 +1,4 @@
-## CallDrop
+## Task 2
 
 ### 1 Tables and keyspaces schema 
 ![alt text](schema.png)
