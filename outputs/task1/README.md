@@ -16,9 +16,7 @@ Private_IP     Public_IP
 
 ## Monitoring
 
-### Grafana URL
-
-[Grafana](http://35.91.232.28:3000/){:target="_blank"}
+### [Grafana URL](http://35.91.232.28:3000/)
 
 ### Dashboard 1
 ![alt text](grafana.png)
