@@ -6,9 +6,7 @@
 
 ```mermaid
 flowchart LR
-    Client[Client Node<br>172.31.26.203] -->|CQL (9042)| DB1[Scylla DB Node 1<br>172.31.31.48]
-    Client --> DB2[Scylla DB Node 2<br>172.31.23.41]
-    Client --> DB3[Scylla DB Node 3<br>172.31.25.35]
+
 
     DB1 <--> DB2
     DB2 <--> DB3
