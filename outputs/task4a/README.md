@@ -61,6 +61,8 @@ In the monitoring dashboard, imbalance between shards may appear as:
 -   Other shards remaining mostly idle
 -   Uneven write distribution across shards
 
+## 📊 Dashboards
+
 `Customer Dashboard using dashboard.json`
   
 <img width="1721" height="945" alt="dash" src="https://github.com/user-attachments/assets/c90e0974-703a-4747-9395-16acadf4cac6" />
